@@ -1,0 +1,31 @@
+{
+  "keymappings":{
+      "VSW": "smag_v",
+      "VA": "smag_va",
+      "TH_BV": "smtvb",
+      "F": "f",
+      "P_theta_f": "spsd_arr",
+      "rhoi": "srho_km",
+      "di": "sdi_km"
+  },
+  "userinit_params":{
+      "fmin": 1,
+      "fmax": 36.62,
+      "tskip": 1,
+      "rhoi": -1,
+      "di": -1,
+      "logkperp_min": -2.5,
+      "logkperp_max": 1,
+      "nkperp": 20,
+      "logkpara_min": -3,
+      "logkpara_max": 1,
+      "nkpara": 20,
+      "dfloor_frac": 1e-12
+  },
+  "basis_params":{
+      "basis_type": "bspline",
+      "p": 3,
+      "nctrl_kperp": 20,
+      "nctrl_kpara": 20
+  }
+}
