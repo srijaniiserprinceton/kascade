@@ -1,7 +1,7 @@
-from buildclass import kascade
-from buildbasis import add_basis_to_kascade
-from setup_inversion import generate_inversion_components
-from optimizer_functions import drive_fistasolver, get_lambda_for_nonlin, solve_log10_adam
+from kascade.src.buildclass import kascade
+from kascade.src.buildbasis import add_basis_to_kascade
+from kascade.src.setup_inversion import generate_inversion_components
+from kascade.src.optimizer_functions import drive_fistasolver, get_lambda_for_nonlin, solve_log10_adam
 
 if __name__=='__main__':
     # file containing the data

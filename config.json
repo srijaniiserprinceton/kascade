@@ -16,10 +16,10 @@
       "di": -1,
       "logkperp_min": -2.5,
       "logkperp_max": 1,
-      "nkperp": 20,
+      "nkperp": 100,
       "logkpara_min": -3,
       "logkpara_max": 1,
-      "nkpara": 20,
+      "nkpara": 100,
       "dfloor_frac": 1e-12
   },
   "basis_params":{

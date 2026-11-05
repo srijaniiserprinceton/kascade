@@ -4,7 +4,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt; plt.ion()
 
-from buildclass import kascade
+from kascade.src.buildclass import kascade
 
 def add_basis_to_kascade(ksc_obj, config_path):
     # reading the config file defined by the user to store the basis parameters

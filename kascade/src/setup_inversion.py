@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.ndimage import gaussian_filter1d
 
-import build_2D_kernel_edgeaware_bothbranch as build_2D_kernel
+from kascade.src import build_2D_kernel_edgeaware_bothbranch as build_2D_kernel
 
 def generate_inversion_components(ksc, P2D=None, floor_frac=1e-12):
     # creating the dictionary attribute for performing the inversion

@@ -52,7 +52,7 @@ def compare_spectra(ksc):
     for i, idx in enumerate(np.random.randint(0, len(dtrue), 9)):
         ax_[i//3, i%3].loglog(ksc.F, dmodel_log[idx], label='Forward-modeled S(f) [log-fit]', color='blue')
         ax_[i//3, i%3].loglog(ksc.F, dtrue[idx], '.', label='Trajectory-based S(f)', color='green')
-        ax_[i//3, i%3].set_title(f"TH_BV = {np.degrees(TH_BV_[idx]):.2f} degrees")
+        ax_[i//3, i%3].set_title(f"TH_BV = {np.degrees(ksc.TH_BV[idx]):.2f} degrees")
         ax_[i//3, i%3].set_xlabel("Frequency (Hz)")
         ax_[i//3, i%3].set_ylabel("S(f)")
         ax_[i//3, i%3].legend()

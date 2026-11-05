@@ -3,7 +3,7 @@ from tqdm import tqdm
 from scipy.linalg import solve
 from scipy.optimize import minimize
 
-import plotter, setup_inversion, misc_funcs
+from kascade.src import plotter, setup_inversion, misc_funcs
 
 def geometric_knee(x, y):
     """
