@@ -36,7 +36,7 @@ def generate_inversion_components(ksc, P2D=None, floor_frac=1e-12):
     ksc.inversion['Gw_T_dw'] = Gw.T @ dw
 
     # using a regularization parameter \lambda (L-curve method)
-    ksc.inversion['lambda_arr'] = np.logspace(-6, 4, 27)
+    ksc.inversion['lambda_arr'] = np.logspace(-8, 2, 21) #np.logspace(-6, 4, 27)
     # D = np.eye(GTG.shape[0])
     ksc.inversion['D'] = ksc.basis['LTL'].toarray()
 
