@@ -30,9 +30,9 @@ def plot_2D_spectra(m, ksc):
     # plotting the true and reconstructed profiles
     fig, ax = plt.subplots(1, 1, figsize=(9, 4))
     # levels = np.linspace(np.log10(1e-8), np.log10(1e2), 15)
-    vmin = -1
-    vmax = np.nanmax(np.log10(P2D_rec))
-    levels = np.linspace(vmin, vmax, 16)
+    vmin = 6 #-1
+    vmax = np.nanmax(np.log10(np.maximum(P2D_rec, 1e-30)))
+    levels = np.linspace(vmin, vmax, 25)
     # im=ax.contourf(np.log10(kperpkperp/(2*np.pi)), np.log10(kparakpara/(2*np.pi)), np.log10(P2D_rec), levels=levels, cmap='nipy_spectral') 
     im=ax.contourf(np.log10(kperpkperp*ksc.rhoi), np.log10(kparakpara*ksc.di), np.log10(P2D_rec), levels=levels, cmap='nipy_spectral') 
     ax.set_title('Reconstructed P(k)')

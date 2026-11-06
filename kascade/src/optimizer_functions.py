@@ -83,7 +83,7 @@ def drive_fistasolver(ksc, plot=False):
         m_prev = m
         m_solutions[lam] = m
 
-    data_misfit  = np.array([np.linalg.norm(ksc.inversion['Gw'] @ m_solutions[lam] - ksc.d)**2 for lam in ksc.inversion['lambda_arr']])
+    data_misfit  = np.array([np.linalg.norm(ksc.inversion['Gw'] @ m_solutions[lam] - ksc.inversion['dw'])**2 for lam in ksc.inversion['lambda_arr']])
     model_misfit = np.array([m_solutions[lam] @ ksc.inversion['D'] @ m_solutions[lam] for lam in ksc.inversion['lambda_arr']])
 
     data_misfit = (data_misfit - np.nanmin(data_misfit)) / (np.nanmax(data_misfit) - np.nanmin(data_misfit))
